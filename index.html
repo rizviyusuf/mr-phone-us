@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="light" />
   <link rel="icon" type="image/png" href="assets/7ccd065d9d77d7fe.png" />
   <title>Phone Repair Tulsa, Broken Arrow & Bixby | Mr. Phone US</title>
   <meta name="description" content="Fast phone screen repair from $39.99, free diagnostics and a 90-day warranty at Mr. Phone US in Tulsa, Broken Arrow and Bixby, Oklahoma." />
@@ -24,13 +24,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
     :root{
-      --bg:#f7f8fb;--surface:#ffffff;--surface-2:#edf1f5;--ink:#111827;--muted:#526070;
-      --line:#d9e0e7;--brand:#0079c8;--brand-2:#00558f;--hot:#e83e8c;--lime:#b9f227;
-      --hero:#07131e;--hero-ink:#f7fbff;--hero-muted:#b7c8d6;--shadow:0 18px 55px rgba(14,32,47,.12);
+      --bg:#d4d4d4;--surface:#ffffff;--surface-2:#ededed;--surface-3:#e6e6e6;--ink:#000000;--muted:#3f4750;
+      --line:#bcbcbc;--brand:#751fff;--brand-2:#5a0fd0;--link:#0d5eba;--link-2:#0a4a94;--loc:#045184;--hours:#e57022;--hot:#e57022;--lime:#4bd1a0;
+      --hero:#ffffff;--hero-ink:#000000;--hero-muted:#3f4750;--shadow:0 18px 55px rgba(0,0,0,.14);
       --radius:24px;--small-radius:14px;
-    }
-    @media(prefers-color-scheme:dark){
-      :root{--bg:#071019;--surface:#101c27;--surface-2:#172633;--ink:#eef7ff;--muted:#a9bccb;--line:#2b3c49;--brand:#36b7ff;--brand-2:#8bd5ff;--hot:#ff5ca8;--lime:#c6f75b;--hero:#03090e;--hero-ink:#f7fbff;--hero-muted:#b7c8d6;--shadow:0 18px 55px rgba(0,0,0,.34)}
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -40,7 +37,7 @@
     button,select{font:inherit}
     button{cursor:pointer}
     .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
-    .nav{position:sticky;top:0;z-index:20;border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(15px)}
+    .nav{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:#ffffff}
     .nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}
     .brand-logo{display:flex;align-items:center;flex:0 0 auto}
     .brand-logo img{display:block;width:60px;height:60px;object-fit:contain;border-radius:9px;background:#fff;box-shadow:0 2px 10px rgba(14,32,47,.12);transform-origin:50% 82%}
@@ -51,11 +48,10 @@
     @keyframes logoSpin{0%{transform:rotate(0deg) scale(1) translateY(0)}22%{transform:rotate(130deg) scale(1.16) translateY(-5px)}48%{transform:rotate(255deg) scale(1.08) translateY(-2px)}72%{transform:rotate(338deg) scale(1.18) translateY(-6px)}86%{transform:rotate(360deg) scale(.94) translateY(0)}100%{transform:rotate(360deg) scale(1) translateY(0)}}
     .nav-links{display:flex;gap:19px;align-items:center;font-size:13px;font-weight:600;color:var(--muted);margin-left:auto}
     .nav-links a:hover{color:var(--ink)}
-    .nav-call{padding:10px 16px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;font-size:14px;white-space:nowrap}
+    .nav-call{padding:10px 16px;border-radius:999px;background:var(--brand);color:#fff;font-weight:700;font-size:14px;white-space:nowrap}
     .hero{background:var(--hero);color:var(--hero-ink);padding:64px 0 54px;overflow:hidden;position:relative}
-    .hero:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(0,121,200,.35),transparent 65%);right:-80px;top:-160px;pointer-events:none}
     .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:64px;align-items:center;position:relative}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--lime);font-weight:700;font-size:13px;letter-spacing:.03em;margin-bottom:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--brand);font-weight:700;font-size:13px;letter-spacing:.03em;margin-bottom:18px}
     .eyebrow:before{content:"";width:28px;height:2px;background:currentColor}
     h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.03;margin:0}
     h1{font-size:clamp(48px,7vw,88px);max-width:780px;letter-spacing:-.052em}
@@ -64,17 +60,27 @@
     .actions{display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:999px;font-weight:700;border:1px solid transparent;transition:background .2s,color .2s,border .2s}
     .btn.primary{background:var(--brand);color:#fff}
-    .btn.primary:hover{background:#1596df}
-    .btn.ghost{border-color:#49606f;color:#fff;background:rgba(255,255,255,.04)}
-    .btn.ghost:hover{background:rgba(255,255,255,.1)}
+    .btn.primary:hover{background:var(--brand-2)}
+    .btn.ghost{border-color:var(--link);color:#fff;background:var(--link)}
+    .btn.ghost:hover{background:var(--link-2);border-color:var(--link-2)}
     .hero-visual{position:relative;min-width:0}
-    .phone-frame{padding:11px;background:#111c26;border:1px solid #304454;border-radius:40px;box-shadow:0 30px 80px rgba(0,0,0,.45);transform:rotate(1.2deg)}
-    .phone-frame img{display:block;width:100%;aspect-ratio:10/8;object-fit:cover;border-radius:31px}
-    .camera{position:absolute;width:92px;height:23px;background:#071019;border-radius:0 0 18px 18px;top:11px;left:50%;transform:translateX(-50%);z-index:2}
-    .float-card{position:absolute;background:#fff;color:#101a22;padding:13px 16px;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.3);font-weight:700;line-height:1.15}
-    .float-card small{display:block;color:#566673;font-weight:500;margin-top:4px}
-    .float-card.one{bottom:28px;left:-28px}
-    .float-card.two{right:-14px;top:40px;background:var(--lime)}
+    .hero-carousel{position:relative;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:var(--surface)}
+    .hero-slides{position:relative;aspect-ratio:16/10}
+    .hero-slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:38px 52px;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s}
+    .hero-slide.active{opacity:1;visibility:visible;z-index:1}
+    .hero-slide svg{width:46px;height:46px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .hero-slide h3{font-size:clamp(32px,3.6vw,48px);letter-spacing:-.03em}
+    .hero-slide p{margin:0;font-size:17px;line-height:1.5;max-width:430px}
+    .hero-slide.hs-warranty{background:#751fff;color:#fff}
+    .hero-slide.hs-prices{background:#0d5eba;color:#fff}
+    .hero-slide.hs-quick{background:#e57022;color:#fff}
+    .hero-slide.hs-diagnosis{background:#4bd1a0;color:#000}
+    .hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:42px;height:42px;border:0;border-radius:50%;background:rgba(255,255,255,.88);color:#000;font-size:24px;line-height:1;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+    .hero-arrow:hover,.hero-arrow:focus-visible{background:#fff;outline:2px solid rgba(0,0,0,.35);outline-offset:2px}
+    .hero-arrow.prev{left:14px}.hero-arrow.next{right:14px}
+    .hero-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+    .hero-dot{width:9px;height:9px;border:0;border-radius:50%;padding:0;background:#9a9a9a;transition:width .2s,background .2s}
+    .hero-dot.active{width:28px;border-radius:999px;background:var(--brand)}
     .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
     .trust-item{background:var(--surface);padding:22px 20px;text-align:center}
     .trust-item strong{display:block;font-family:"Bricolage Grotesque";font-size:20px}
@@ -95,40 +101,22 @@
     .finder-fallback strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:17px;margin-bottom:4px}
     .finder-fallback span{color:var(--muted)}
     .brand-call-panel{position:relative;z-index:1}
-    .brand-call-panel>p{color:#b7c8d6;margin:0 0 16px;max-width:520px}
+    .brand-call-panel>p{color:var(--muted);margin:0 0 16px;max-width:520px}
     .brand-call-actions{display:flex;gap:9px;flex-wrap:wrap}
-    .brand-call-actions a{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);padding:10px 13px;border-radius:999px;font-size:13px;font-weight:700}
-    .brand-call-actions a:hover{background:rgba(255,255,255,.16)}
+    .brand-call-actions a{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--link);background:var(--link);color:#fff;padding:10px 13px;border-radius:999px;font-size:13px;font-weight:700}
+    .brand-call-actions a:hover{background:var(--link-2)}
     select{width:100%;padding:15px 44px 15px 15px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;outline:none}
     select:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 20%,transparent)}
-    .result{padding:38px;background:var(--hero);color:#fff;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
-    .result:after{content:"";position:absolute;width:260px;height:260px;border:42px solid rgba(54,183,255,.1);border-radius:50%;right:-80px;bottom:-100px}
-    .result-label{color:var(--lime);font-weight:700;font-size:13px}
+    .result{padding:38px;background:var(--surface-2);color:var(--ink);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+    .result:after{content:"";position:absolute;width:260px;height:260px;border:42px solid rgba(117,31,255,.08);border-radius:50%;right:-80px;bottom:-100px}
+    .result-label{color:var(--brand);font-weight:700;font-size:13px}
     .result h3{font-size:clamp(30px,4vw,48px);margin:8px 0 22px;max-width:500px}
     .price-row{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
-    .price-box{min-width:145px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:15px;border-radius:14px}
-    .price-box span{display:block;color:#b7c8d6;font-size:12px}
+    .price-box{min-width:145px;background:#ffffff;border:1px solid var(--line);padding:15px;border-radius:14px}
+    .price-box span{display:block;color:var(--muted);font-size:12px}
     .price-box strong{font-family:"Bricolage Grotesque";font-size:26px}
-    .result-note{color:#aebfcb;font-size:13px;margin:20px 0 0;position:relative;z-index:1}
+    .result-note{color:var(--muted);font-size:13px;margin:20px 0 0;position:relative;z-index:1}
     .result-note a{text-decoration:underline;text-underline-offset:3px}
-    .reel-showcase{background:var(--hero);color:#fff;overflow:hidden}
-    .reel-showcase .section-head p{color:#b7c8d6}
-    .reel-stage{position:relative;max-width:980px;margin:auto}
-    .reel-viewport{position:relative;min-height:620px;overflow:hidden;border-radius:var(--radius);background:#03090e;border:1px solid #2b4252;box-shadow:0 28px 80px rgba(0,0,0,.34);touch-action:pan-y}
-    .reel-slide{position:absolute;inset:0;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateX(9%);transition:opacity .45s ease,transform .45s ease,visibility .45s}
-    .reel-slide.active{opacity:1;visibility:visible;transform:translateX(0);z-index:2}
-    .reel-slide.was-active{transform:translateX(-9%)}
-    .reel-slide video{width:100%;height:100%;min-height:620px;object-fit:contain;background:#000}
-    .sound-toggle{position:absolute;right:18px;bottom:18px;z-index:4;border:1px solid rgba(255,255,255,.42);background:rgba(3,9,14,.78);color:#fff;padding:10px 14px;border-radius:999px;font-weight:700;white-space:nowrap;backdrop-filter:blur(8px)}
-    .reel-arrow{position:absolute;top:50%;z-index:5;width:48px;height:48px;margin-top:-24px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:rgba(3,9,14,.74);color:#fff;font-size:28px;line-height:1;display:grid;place-items:center;backdrop-filter:blur(8px)}
-    .reel-arrow:hover,.reel-arrow:focus-visible,.sound-toggle:hover,.sound-toggle:focus-visible{background:var(--brand);border-color:var(--brand);outline:none}
-    .reel-arrow.prev{left:18px}.reel-arrow.next{right:18px}
-    .reel-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px}
-    .reel-dots{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
-    .reel-dot{width:9px;height:9px;border:0;border-radius:50%;padding:0;background:#526979;transition:width .2s,background .2s}
-    .reel-dot.active{width:28px;border-radius:999px;background:var(--lime)}
-    .reel-count{font-size:12px;color:#a9bccb;font-variant-numeric:tabular-nums}
-    .reel-help{text-align:center;color:#90a7b7;font-size:13px;margin:12px 0 0}
     .services{background:var(--surface-2)}
     .service-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
     .service{background:var(--surface);padding:26px;border:1px solid var(--line);border-radius:20px;min-height:210px;display:flex;flex-direction:column}
@@ -137,17 +125,17 @@
     .service h3{font-size:22px;margin-bottom:8px}
     .service p{color:var(--muted);margin:0;font-size:14px}
     .service .mini{margin-top:auto;padding-top:20px;font-weight:700;font-size:13px;color:var(--brand)}
-    .arcade{background:var(--hero);color:#fff}
-    .arcade .section-head p{color:#b7c8d6}
+    .arcade{background:var(--surface-2);color:var(--ink)}
+    .arcade .section-head p{color:var(--muted)}
     .game-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:18px}
-    .game-tab{border:1px solid #334957;background:#0c1b27;color:#a9bccb;padding:13px 10px;border-radius:12px;font-weight:700;min-height:52px}
-    .game-tab.active{background:var(--lime);color:#102010;border-color:var(--lime)}
+    .game-tab{border:1px solid var(--line);background:#ffffff;color:var(--muted);padding:13px 10px;border-radius:12px;font-weight:700;min-height:52px}
+    .game-tab.active{background:var(--lime);color:#000;border-color:var(--lime)}
     .game-zone{display:grid;grid-template-columns:.78fr 1.22fr;gap:18px;align-items:stretch}
     .game-copy{background:var(--hot);color:#fff;padding:38px;border-radius:var(--radius);display:flex;flex-direction:column;justify-content:center}
     .game-copy h3{font-size:clamp(34px,5vw,58px);letter-spacing:-.04em}
     .game-copy p{font-size:17px;max-width:440px;margin:15px 0 24px}
     .game-copy .btn{align-self:flex-start;background:#fff;color:#24101a;border:0}
-    .game-board{position:relative;overflow:hidden;background:#0b1721;padding:24px;border:1px solid #2b4252;border-radius:var(--radius);color:#fff;min-height:480px;display:flex;flex-direction:column}
+    .game-board{position:relative;overflow:hidden;background:#ffffff;padding:24px;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);min-height:480px;display:flex;flex-direction:column}
     .victory-burst{position:absolute;inset:0;z-index:12;display:grid;place-items:center;background:rgba(3,9,14,.74);pointer-events:none;animation:victoryFade 3.6s ease both}
     .victory-center{text-align:center;position:relative;z-index:2;padding:28px}
     .victory-center img{display:block;width:150px;height:178px;object-fit:cover;object-position:center 64%;margin:0 auto 12px;border-radius:18px;background:#f3f3f3;box-shadow:0 14px 44px rgba(0,0,0,.45);animation:logoCheer .58s ease-in-out 5 alternate}
@@ -160,41 +148,41 @@
     @keyframes victoryFade{0%,82%{opacity:1}100%{opacity:0;visibility:hidden}}
     .game-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}
     .score{font-family:"Bricolage Grotesque";font-size:19px}
-    .screen{position:relative;flex:1;min-height:340px;border:7px solid #364958;border-radius:34px;background:linear-gradient(145deg,#17334a,#07131e);overflow:hidden;touch-action:manipulation;display:grid;place-items:center}
+    .screen{position:relative;flex:1;min-height:340px;border:7px solid #c6c6c6;border-radius:34px;background:var(--surface-2);overflow:hidden;touch-action:manipulation;display:grid;place-items:center}
     .screen.phone-screen:before{content:"";position:absolute;width:90px;height:20px;background:#02070b;border-radius:0 0 14px 14px;left:50%;top:0;transform:translateX(-50%);z-index:2}
-    .crack{position:absolute;width:58px;height:58px;border:0;background:transparent;padding:0;color:#fff;filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+    .crack{position:absolute;width:58px;height:58px;border:0;background:transparent;padding:0;color:#222222;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3))}
     .crack svg{width:100%;height:100%}
     .pixel-grid{display:grid;grid-template-columns:repeat(5,42px);gap:8px}
-    .pixel{width:42px;height:42px;border:1px solid #31516a;background:#17334a;border-radius:7px}
-    .pixel.hot{background:var(--hot);border-color:#ff9bc8;box-shadow:0 0 0 4px rgba(232,62,140,.18)}
+    .pixel{width:42px;height:42px;border:1px solid #b9b9b9;background:#ffffff;border-radius:7px}
+    .pixel.hot{background:var(--hot);border-color:#c85a10;box-shadow:0 0 0 4px rgba(229,112,34,.22)}
     .charge-wrap{text-align:center;width:min(320px,82%)}
-    .battery{height:96px;border:5px solid #88a0b0;border-radius:18px;padding:8px;position:relative;margin:0 14px 28px}
-    .battery:after{content:"";position:absolute;right:-16px;top:30px;width:12px;height:28px;border-radius:0 6px 6px 0;background:#88a0b0}
+    .battery{height:96px;border:5px solid #8a8a8a;border-radius:18px;padding:8px;position:relative;margin:0 14px 28px}
+    .battery:after{content:"";position:absolute;right:-16px;top:30px;width:12px;height:28px;border-radius:0 6px 6px 0;background:#8a8a8a}
     .battery-fill{height:100%;width:0;border-radius:9px;background:var(--lime);transition:width .12s}
-    .charge-button{border:0;border-radius:999px;background:var(--lime);color:#12220d;font-weight:800;padding:16px 28px;box-shadow:0 6px 0 #648b10;touch-action:manipulation}
-    .charge-button:active{transform:translateY(4px);box-shadow:0 2px 0 #648b10}
+    .charge-button{border:0;border-radius:999px;background:var(--lime);color:#000;font-weight:800;padding:16px 28px;box-shadow:0 6px 0 #2f9e77;touch-action:manipulation}
+    .charge-button:active{transform:translateY(4px);box-shadow:0 2px 0 #2f9e77}
     .match-grid{display:grid;grid-template-columns:repeat(4,minmax(56px,78px));gap:10px}
-    .match-card{aspect-ratio:1;border:1px solid #3c5668;border-radius:12px;background:#102332;color:transparent;font-size:24px;font-weight:800}
+    .match-card{aspect-ratio:1;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);color:transparent;font-size:24px;font-weight:800}
     .match-card.open,.match-card.matched{background:var(--brand);color:#fff}
-    .match-card.matched{background:var(--lime);color:#13200f}
+    .match-card.matched{background:var(--lime);color:#000}
     .signal-pad{display:grid;grid-template-columns:repeat(2,110px);gap:12px}
     .signal-key{height:110px;border:0;border-radius:18px;opacity:.54;transition:opacity .1s,transform .1s}
     .signal-key[data-signal="0"]{background:#e64b8e}.signal-key[data-signal="1"]{background:#43bff2}.signal-key[data-signal="2"]{background:#c4ef42}.signal-key[data-signal="3"]{background:#ffb649}
     .signal-key.lit{opacity:1;transform:scale(.96)}
-    .game-message{color:#b7c8d6;font-size:13px;margin:14px 6px 0;min-height:20px}
+    .game-message{color:var(--muted);font-size:13px;margin:14px 6px 0;min-height:20px}
     .quiz-wrap{width:min(520px,88%);text-align:left}
     .quiz-question{font-family:"Bricolage Grotesque";font-size:24px;line-height:1.2;margin:0 0 18px}
     .quiz-options{display:grid;gap:9px}
-    .quiz-option{border:1px solid #496273;background:#132838;color:#fff;border-radius:12px;padding:12px 14px;text-align:left;font-weight:700}
+    .quiz-option{border:1px solid var(--line);background:#ffffff;color:var(--ink);border-radius:12px;padding:12px 14px;text-align:left;font-weight:700}
     .quiz-option:hover,.quiz-option:focus-visible{border-color:var(--lime)}
-    .quiz-prize{text-align:center;background:#122534;border:1px solid #496273;border-radius:18px;padding:26px;width:min(440px,88%)}
-    .quiz-prize strong{display:block;font-family:"Bricolage Grotesque";font-size:28px;color:var(--lime);margin-bottom:8px}
-    .quiz-code{display:inline-block;margin:12px 0;padding:10px 16px;background:#fff;color:#101820;border-radius:8px;font-weight:800;letter-spacing:.08em}
+    .quiz-prize{text-align:center;background:var(--surface-2);border:1px solid var(--line);border-radius:18px;padding:26px;width:min(440px,88%)}
+    .quiz-prize strong{display:block;font-family:"Bricolage Grotesque";font-size:28px;color:var(--brand);margin-bottom:8px}
+    .quiz-code{display:inline-block;margin:12px 0;padding:10px 16px;background:#000;color:#fff;border-radius:8px;font-weight:800;letter-spacing:.08em}
     .story{background:var(--surface)}
     .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .story-lead{background:var(--hero);color:#fff;padding:40px;border-radius:var(--radius)}
+    .story-lead{background:var(--brand);color:#fff;padding:40px;border-radius:var(--radius)}
     .story-lead h3{font-size:clamp(32px,4vw,50px);margin-bottom:18px}
-    .story-lead p{color:#b7c8d6;font-size:17px;margin:0 0 16px}
+    .story-lead p{color:#e9e2ff;font-size:17px;margin:0 0 16px}
     .story-steps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .story-step{background:var(--surface-2);padding:24px;border-radius:18px;border:1px solid var(--line)}
     .story-step b{display:block;color:var(--brand);font-family:"Bricolage Grotesque";font-size:30px;margin-bottom:18px}
@@ -210,18 +198,18 @@
     .ondemand-panel{display:grid;grid-template-columns:.95fr 1.05fr;gap:18px;align-items:stretch}
     .ondemand-callout{background:var(--brand);color:#fff;padding:42px;border-radius:var(--radius);display:flex;flex-direction:column;justify-content:center}
     .ondemand-callout h2{font-size:clamp(38px,5vw,64px);letter-spacing:-.04em;margin-bottom:18px}
-    .ondemand-callout p{font-size:18px;margin:0 0 24px;color:#e3f4ff}.ondemand-callout .btn{align-self:flex-start;background:#fff;color:#0a4972}
+    .ondemand-callout p{font-size:18px;margin:0 0 24px;color:#e9e2ff}.ondemand-callout .btn{align-self:flex-start;background:#fff;color:var(--brand)}
     .ondemand-details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:36px;display:grid;align-content:center;gap:22px}
     .ondemand-detail{display:grid;grid-template-columns:46px 1fr;gap:16px;align-items:start}
-    .ondemand-detail b{display:grid;place-items:center;width:42px;height:42px;background:var(--lime);color:#15220c;border-radius:50%;font-family:"Bricolage Grotesque"}
+    .ondemand-detail b{display:grid;place-items:center;width:42px;height:42px;background:var(--lime);color:#000;border-radius:50%;font-family:"Bricolage Grotesque"}
     .ondemand-detail strong{display:block;font-family:"Bricolage Grotesque";font-size:20px;margin-bottom:4px}.ondemand-detail span{color:var(--muted);font-size:14px}
     .giveaway{padding:0 0 88px;background:var(--surface)}
-    .giveaway-panel{background:var(--lime);color:#14200e;border-radius:var(--radius);padding:42px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+    .giveaway-panel{background:var(--lime);color:#000;border-radius:var(--radius);padding:42px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
     .giveaway-panel h2{font-size:clamp(36px,5vw,62px);letter-spacing:-.04em;margin-bottom:16px}
     .giveaway-panel p{font-size:17px;margin:0;max-width:650px}
     .giveaway-steps{display:grid;gap:10px}
     .giveaway-step{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.48);padding:16px;border-radius:14px}
-    .giveaway-step b{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:50%;background:#14200e;color:var(--lime)}
+    .giveaway-step b{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:50%;background:#000;color:var(--lime)}
     .giveaway-step span{font-size:14px}.giveaway-note{font-size:12px!important;margin-top:16px!important;opacity:.78}
     .shop-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     .products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
@@ -231,18 +219,18 @@
     .product h3{font-size:17px;line-height:1.2;margin-bottom:7px}
     .product strong{font-family:"Bricolage Grotesque";font-size:20px}
     .product small{display:block;color:var(--muted);margin-top:4px}
-    .shop-aside{background:var(--hero);color:#fff;border-radius:var(--radius);padding:34px;display:flex;flex-direction:column;justify-content:space-between}
+    .shop-aside{background:var(--surface-3);color:var(--ink);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column;justify-content:space-between}
     .shop-aside h3{font-size:34px;margin-bottom:14px}
-    .shop-aside p{color:#b7c8d6}
+    .shop-aside p{color:var(--muted)}
     .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}
-    .chip{font-size:12px;border:1px solid #435968;padding:7px 10px;border-radius:999px}
+    .chip{font-size:12px;border:1px solid #a8a8a8;padding:7px 10px;border-radius:999px}
     .locations{background:var(--surface-2)}
     .location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .location{background:var(--surface);border:1px solid var(--line);padding:28px;border-radius:20px;display:flex;flex-direction:column;min-width:0}
-    .loc-badge{align-self:flex-start;background:var(--surface-2);color:var(--brand);font-size:12px;font-weight:800;padding:7px 10px;border-radius:999px;margin-bottom:34px}
-    .location h3{font-size:28px;margin-bottom:16px}
+    .loc-badge{align-self:flex-start;background:var(--surface-2);color:var(--loc);font-size:12px;font-weight:800;padding:7px 10px;border-radius:999px;margin-bottom:34px}
+    .location h3{font-size:28px;margin-bottom:16px;color:var(--loc)}
     .location address{font-style:normal;color:var(--muted);margin-bottom:18px}
-    .hours{font-size:14px;color:var(--muted);padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px}
+    .hours{font-size:14px;color:var(--hours);padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px}
     .loc-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto}
     .loc-links a{font-weight:700;font-size:13px;border:1px solid var(--line);padding:9px 12px;border-radius:999px}
     .bixby-note{font-size:12px;color:var(--muted);margin:18px 0 0}
@@ -258,8 +246,8 @@
     .store-reviews{padding:28px 0;border-top:1px solid var(--line)}
     .store-reviews:first-of-type{border-top:0;padding-top:0}
     .store-review-head{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:18px}
-    .store-review-head h3{font-size:28px}.store-review-head p{margin:5px 0 0;color:var(--muted);font-size:14px}
-    .google-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--brand)}
+    .store-review-head h3{font-size:28px;color:var(--loc)}.store-review-head p{margin:5px 0 0;color:var(--muted);font-size:14px}
+    .google-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--link)}
     .empty-reviews{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;color:var(--muted)}
     .blog-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .blog-list li{background:var(--surface);border:1px solid var(--line);border-radius:18px;min-width:0;overflow:hidden}
@@ -273,8 +261,8 @@
     .blog-list li{transition:border-color .2s ease,box-shadow .2s ease}
     .blog-list li:hover,.blog-list li:focus-within{border-color:var(--brand);box-shadow:var(--shadow)}
     .blog-list a.blog-card:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
-    .blog-list a.blog-card:hover strong{color:var(--brand)}
-    .read-more{font-size:13px;font-weight:700;color:var(--brand)}
+    .blog-list a.blog-card:hover strong{color:var(--link)}
+    .read-more{font-size:13px;font-weight:700;color:var(--link)}
     .post-wrap{max-width:780px}
     .post-cover{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface-2);margin-bottom:32px}
     .post-title{font-size:clamp(32px,5vw,52px);letter-spacing:-.032em;margin-bottom:12px}
@@ -284,7 +272,7 @@
     .post-body h3{font-size:24px;letter-spacing:-.02em;margin:32px 0 10px}
     .post-body ul{margin:0 0 18px;padding-left:22px}
     .post-body li{margin-bottom:8px}
-    .post-body a{color:var(--brand);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .post-body a{color:var(--link);font-weight:600;text-decoration:underline;text-underline-offset:3px}
     .post-cta{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;margin-top:38px}
     .post-cta strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:22px;margin-bottom:8px}
     .post-cta p{color:var(--muted);margin:0 0 18px;font-size:15px}
@@ -292,56 +280,56 @@
     .post-cta-links a{font-weight:700;font-size:13px;border:1px solid var(--line);padding:10px 14px;border-radius:999px;background:var(--surface)}
     .post-cta-links a:first-child{background:var(--brand);border-color:var(--brand);color:#fff}
     .post-back-bottom{margin-top:30px;margin-bottom:0}
-    .store-updates{padding-bottom:0}.updates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.update-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:16px;min-height:190px}.update-card p{margin:0;font-size:16px;line-height:1.55}.update-card small{color:var(--muted);margin-top:auto}.catalog-list{margin:24px 0 0;padding-top:20px;border-top:1px solid #435968;display:grid;gap:8px}.catalog-list div{display:flex;justify-content:space-between;gap:16px;font-size:13px}.catalog-list span{color:#b7c8d6;text-align:right}.policy{background:var(--surface-2)}.policy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.policy-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}.policy-card h3{font-size:20px;margin-bottom:10px}.policy-card p{color:var(--muted);margin:0;font-size:14px;line-height:1.6}
-    .faq{background:var(--hero);color:#fff}
-    .faq .section-head p{color:#b7c8d6}
-    details{border-top:1px solid #2e4352;padding:22px 0}
-    details:last-child{border-bottom:1px solid #2e4352}
+    .store-updates{padding-bottom:0}.updates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.update-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:16px;min-height:190px}.update-card p{margin:0;font-size:16px;line-height:1.55}.update-card small{color:var(--muted);margin-top:auto}.catalog-list{margin:24px 0 0;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:8px}.catalog-list div{display:flex;justify-content:space-between;gap:16px;font-size:13px}.catalog-list span{color:var(--muted);text-align:right}.policy{background:var(--surface-2)}.policy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.policy-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}.policy-card h3{font-size:20px;margin-bottom:10px}.policy-card p{color:var(--muted);margin:0;font-size:14px;line-height:1.6}
+    .faq{background:#ffffff;color:#000}
+    .faq .section-head p{color:var(--muted)}
+    details{border-top:1px solid var(--line);padding:22px 0}
+    details:last-child{border-bottom:1px solid var(--line)}
     summary{font-family:"Bricolage Grotesque";font-size:23px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
     summary::-webkit-details-marker{display:none}
-    summary:after{content:"+";color:var(--lime)}
+    summary:after{content:"+";color:var(--brand)}
     details[open] summary:after{content:"−"}
-    details p{color:#b7c8d6;max-width:820px;margin:14px 0 0}
-    footer{background:#02080c;color:#c7d5df;padding:48px 0 28px}
+    details p{color:var(--muted);max-width:820px;margin:14px 0 0}
+    footer{background:#000000;color:#ffffff;padding:48px 0 28px}
     .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
     .footer-logo{display:block;width:158px;height:156px;object-fit:contain;margin-bottom:22px;border-radius:12px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28)}
     .footer-cta h2{color:#fff;font-size:clamp(34px,5vw,56px);max-width:560px;margin-bottom:20px}
+    .footer-cta .btn.primary{background:var(--link);border-color:var(--link)}
+    .footer-cta .btn.primary:hover{background:var(--link-2);border-color:var(--link-2)}
     .socials{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .socials a{border:1px solid #334956;padding:9px 12px;border-radius:999px;font-size:13px}
-    .footnote{border-top:1px solid #243541;margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;color:#8397a5;font-size:12px;flex-wrap:wrap}
+    .socials a{border:1px solid #444444;padding:9px 12px;border-radius:999px;font-size:13px;color:#fff}
+    .footnote{border-top:1px solid #333333;margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;color:#d6d6d6;font-size:12px;flex-wrap:wrap}
     .sources a{text-decoration:underline;text-underline-offset:3px}
-    .back-to-top{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom));z-index:18;width:58px;height:58px;padding:0;border:1px solid color-mix(in srgb,#fff 48%,transparent);border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;box-shadow:0 14px 34px rgba(0,85,143,.32);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(14px);transition:opacity .18s ease,transform .18s ease,visibility .18s,background .18s ease}
+    .back-to-top{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom));z-index:18;width:58px;height:58px;padding:0;border:1px solid color-mix(in srgb,#fff 48%,transparent);border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;box-shadow:0 14px 34px rgba(90,15,208,.32);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(14px);transition:opacity .18s ease,transform .18s ease,visibility .18s,background .18s ease}
     .back-to-top[hidden]{display:none}
     .back-to-top svg{width:26px;height:26px;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
     .back-to-top.visible{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
     .back-to-top:hover{background:var(--brand-2)}
     .back-to-top:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
-    .back-to-top.near-reel{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(14px)}
     .page-off{display:none!important}
     .nav-links a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--brand);text-decoration-thickness:2px}
     .mobile-pages{display:none}
     .book{background:var(--surface-2)}
     .book-call{margin-top:auto}
     .book-note{margin:22px 0 0;color:var(--muted)}
-    .book-note a{color:var(--brand);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+    .book-note a{color:var(--link);font-weight:700;text-decoration:underline;text-underline-offset:3px}
     .accessories-more{background:var(--surface)}
     .book-dir{margin-top:12px}
     .home-stores{background:var(--surface-2)}
-    .store-detail-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--brand);margin:2px 0 14px}
+    .store-detail-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--link);margin:2px 0 14px}
     .store-detail-link:hover{text-decoration:underline;text-underline-offset:4px}
     .store-detail{background:var(--bg)}
-    .back-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--brand);margin-bottom:26px}
+    .back-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--link);margin-bottom:26px}
     .back-link:hover{text-decoration:underline;text-underline-offset:4px}
-    .store-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start;margin-bottom:40px}
-    .store-name{font-size:clamp(36px,5vw,56px);letter-spacing:-.035em;margin-bottom:14px}
+    .store-hero{display:grid;grid-template-columns:1fr;gap:34px;align-items:start;margin-bottom:40px;max-width:780px}
+    .store-name{font-size:clamp(36px,5vw,56px);letter-spacing:-.035em;margin-bottom:14px;color:var(--loc)}
     .store-about p{color:var(--muted);font-size:16px;margin:0 0 14px;max-width:560px}
-    .store-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);display:block}
     .store-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:40px}
     .store-fact{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px}
     .store-fact h4{font-family:"Bricolage Grotesque";font-size:20px;margin:0 0 14px}
     .store-fact address{font-style:normal;color:var(--muted);margin-bottom:14px}
     .store-hours{list-style:none;margin:0;padding:0;font-size:14px}
-    .store-hours li{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .store-hours li{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-top:1px solid var(--line);color:var(--hours)}
     .store-hours li:first-child{border-top:0;padding-top:0}
     .store-hours li strong{color:var(--ink);font-weight:600}
     .store-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
@@ -352,11 +340,11 @@
     .store-crosslinks h4{font-family:"Bricolage Grotesque";font-size:22px;margin:0 0 14px}
     .store-crosslinks .store-actions{margin-top:0}
     @media(max-width:900px){.store-hero,.store-facts{grid-template-columns:1fr}}
-    .footer-stores{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;padding-top:30px;border-top:1px solid #243541}
+    .footer-stores{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;padding-top:30px;border-top:1px solid #333333}
     .footer-stores h3{color:#fff;font-size:19px;margin-bottom:9px}
-    .footer-stores address{font-style:normal;color:#a9bccb;font-size:14px;margin-bottom:13px}
+    .footer-stores address{font-style:normal;color:#d6d6d6;font-size:14px;margin-bottom:13px}
     .f-links{display:flex;gap:8px;flex-wrap:wrap}
-    .f-links a{border:1px solid #334956;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:700;color:#e6f2fa}
+    .f-links a{border:1px solid #444444;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:700;color:#fff}
     @media(max-width:900px){.footer-stores{grid-template-columns:1fr}}
     @media(max-width:620px){.mobile-pages{display:flex;gap:8px;overflow-x:auto;padding:10px 0 12px;scrollbar-width:none}.mobile-pages::-webkit-scrollbar{display:none}.mobile-pages a{flex:0 0 auto;padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:700;background:var(--surface);color:var(--muted)}.mobile-pages a[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}}
     /* --- Compact homepage (90% scroll cut) --- */
@@ -364,7 +352,6 @@
     .hero h1{font-size:clamp(36px,5.5vw,56px)}
     .hero-copy{font-size:17px;margin:14px 0 18px;max-width:560px}
     .hero-grid{gap:32px}
-    .phone-frame img{aspect-ratio:16/10}
     .trust-item{padding:13px 12px}
     .trust-item strong{font-size:17px}
     section.compact{padding:26px 0}
@@ -372,10 +359,10 @@
     section.compact .section-head h2{font-size:clamp(26px,3.6vw,38px)}
     .finder-form{padding:24px}
     .result{padding:24px}
-    .home-book{background:var(--hero);color:#fff;padding:26px 0}
+    .home-book{background:var(--brand);color:#fff;padding:26px 0}
     .home-book-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
     .home-book-inner h2{font-size:clamp(24px,3.4vw,34px);color:#fff}
-    .home-book-inner p{color:#b7c8d6;margin:6px 0 0;font-size:14px}
+    .home-book-inner p{color:#e9e2ff;margin:6px 0 0;font-size:14px}
     .home-book-actions{display:flex;gap:9px;flex-wrap:wrap}
     .home-more{padding:18px 0 26px;background:var(--bg)}
     .home-more-row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
@@ -385,73 +372,73 @@
     .home-stores{padding:26px 0}
     .home-stores .location{padding:20px}
     .home-stores .loc-badge{margin-bottom:14px}
-    .footer-games{margin-top:14px;font-size:13px;color:#a9bccb}
-    .footer-games a{color:#e6f2fa;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+    .footer-games{margin-top:14px;font-size:13px;color:#d6d6d6}
+    .footer-games a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:700}
     @media(max-width:620px){.hero{padding:22px 0 20px}.hero h1{font-size:38px}.home-book-inner{display:block}.home-book-actions{margin-top:14px}.home-book-actions a{flex:1 1 auto;text-align:center}}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(max-width:900px){
       .hero-grid,.finder,.game-zone,.shop-layout,.story-grid,.giveaway-panel,.ondemand-panel{grid-template-columns:1fr}.hero-grid{gap:48px}.hero-visual{max-width:680px}.game-tabs{grid-template-columns:repeat(3,1fr)}.service.big{grid-column:span 12}.service.small{grid-column:span 6}.location-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.socials{justify-content:flex-start}.blog-list,.updates-grid,.policy-grid{grid-template-columns:repeat(2,1fr)}.trust-strip{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:620px){
-      .wrap{width:min(100% - 28px,1180px)}.nav-inner{height:60px;gap:10px}.brand-logo img{width:50px;height:50px}.nav-links{display:none}.nav-call{font-size:12px;padding:9px 12px}.hero{padding:45px 0 42px}h1{font-size:49px}.hero-copy{font-size:18px}.phone-frame{border-radius:28px;padding:8px}.phone-frame img{border-radius:21px;aspect-ratio:4/3}.float-card.one{left:-4px;bottom:12px}.float-card.two{right:-4px;top:20px}.trust-item{padding:18px 10px}.trust-item strong{font-size:17px}section{padding:64px 0}.back-to-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:56px;height:56px}.section-head{display:block}.section-head p{margin-top:16px}.reel-viewport{min-height:560px}.reel-slide video{min-height:560px}.reel-arrow{top:46%;width:42px;height:42px}.reel-arrow.prev{left:10px}.reel-arrow.next{right:10px}.sound-toggle{font-size:12px;padding:9px 12px}.finder-form,.result{padding:26px}.segmented button{flex-basis:calc(50% - 2px);white-space:normal}.brand-call-actions a{flex:1 1 100%}.service.small{grid-column:span 12}.game-tabs{grid-template-columns:repeat(2,1fr)}.game-tab:last-child{grid-column:1/-1}.game-copy{padding:28px}.game-board{padding:14px;min-height:430px}.screen{min-height:320px}.pixel-grid{grid-template-columns:repeat(5,36px);gap:7px}.pixel{width:36px;height:36px}.match-grid{grid-template-columns:repeat(4,58px)}.story-lead,.giveaway-panel,.ondemand-callout,.ondemand-details{padding:28px}.story-steps{grid-template-columns:1fr}.giveaway{padding-bottom:64px}.products{grid-template-columns:1fr}.product{grid-template-columns:72px 1fr;padding:18px}.shop-aside{padding:28px}.location{padding:24px}.review-grid{grid-template-columns:1fr}.store-review-head{display:block}.store-review-head .google-link{margin-top:12px}.review-card{min-height:0;padding:24px}.review-card blockquote{font-size:18px}.blog-list,.updates-grid,.policy-grid{grid-template-columns:1fr}.blog-card-copy{padding-right:20px}.actions .btn{width:100%}.footer-cta .btn{width:auto}.socials a{padding:8px 10px}.footnote{display:block}.sources{margin-top:10px}
+      .wrap{width:min(100% - 28px,1180px)}.nav-inner{height:60px;gap:10px}.brand-logo img{width:50px;height:50px}.nav-links{display:none}.nav-call{font-size:12px;padding:9px 12px}.hero{padding:45px 0 42px}h1{font-size:49px}.hero-copy{font-size:18px}.hero-slides{aspect-ratio:4/3}.hero-slide{padding:24px 48px}.hero-slide h3{font-size:30px}.hero-slide p{font-size:15px}.hero-arrow{width:38px;height:38px}.hero-arrow.prev{left:8px}.hero-arrow.next{right:8px}.trust-item{padding:18px 10px}.trust-item strong{font-size:17px}section{padding:64px 0}.back-to-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:56px;height:56px}.section-head{display:block}.section-head p{margin-top:16px}.finder-form,.result{padding:26px}.segmented button{flex-basis:calc(50% - 2px);white-space:normal}.brand-call-actions a{flex:1 1 100%}.service.small{grid-column:span 12}.game-tabs{grid-template-columns:repeat(2,1fr)}.game-tab:last-child{grid-column:1/-1}.game-copy{padding:28px}.game-board{padding:14px;min-height:430px}.screen{min-height:320px}.pixel-grid{grid-template-columns:repeat(5,36px);gap:7px}.pixel{width:36px;height:36px}.match-grid{grid-template-columns:repeat(4,58px)}.story-lead,.giveaway-panel,.ondemand-callout,.ondemand-details{padding:28px}.story-steps{grid-template-columns:1fr}.giveaway{padding-bottom:64px}.products{grid-template-columns:1fr}.product{grid-template-columns:72px 1fr;padding:18px}.shop-aside{padding:28px}.location{padding:24px}.review-grid{grid-template-columns:1fr}.store-review-head{display:block}.store-review-head .google-link{margin-top:12px}.review-card{min-height:0;padding:24px}.review-card blockquote{font-size:18px}.blog-list,.updates-grid,.policy-grid{grid-template-columns:1fr}.blog-card-copy{padding-right:20px}.actions .btn{width:100%}.footer-cta .btn{width:auto}.socials a{padding:8px 10px}.footnote{display:block}.sources{margin-top:10px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.brand-logo:hover img,.brand-logo:focus-visible img,.brand-logo.logo-play img,.brand-logo.logo-spin img{animation:none!important}.victory-burst{animation:victoryFade 2.5s linear both}.victory-center img,.victory-center strong,.confetti-piece{animation:none!important}.confetti-piece{display:none}.story-steps.steps-armed .story-step{opacity:1!important;transform:none!important}.story-steps.in-view .story-step{animation:none!important}}
     /* --- Chat messenger --- */
     .back-to-top{bottom:calc(98px + env(safe-area-inset-bottom))}
     .chat-widget{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom));z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:12px;font-family:"IBM Plex Sans",sans-serif}
-    .chat-launcher{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:999px;background:var(--brand);color:#fff;font-weight:700;font-size:15px;padding:14px 20px;box-shadow:0 14px 34px rgba(0,85,143,.35);position:relative}
+    .chat-launcher{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:999px;background:var(--brand);color:#fff;font-weight:700;font-size:15px;padding:14px 20px;box-shadow:0 14px 34px rgba(90,15,208,.35);position:relative}
     .chat-launcher:hover{background:var(--brand-2)}
     .chat-launcher:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
     .chat-launcher svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
     .chat-badge{position:absolute;top:-6px;right:-4px;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--hot);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center;border:2px solid var(--bg)}
     .chat-badge[hidden]{display:none}
-    .chat-teaser{display:flex;align-items:flex-start;gap:6px;width:min(300px,calc(100vw - 32px));background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:8px 8px 8px 14px;animation:chatIn .25s ease}
+    .chat-teaser{display:flex;align-items:flex-start;gap:6px;width:min(280px,calc(100vw - 32px));background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:8px 8px 8px 14px;animation:chatIn .25s ease}
     .chat-teaser[hidden]{display:none}
     .chat-teaser-body{flex:1;border:0;background:transparent;text-align:left;padding:4px 0;color:var(--ink)}
     .chat-teaser-body strong{display:block;font-size:13px;margin-bottom:2px}
     .chat-teaser-body span{font-size:13px;color:var(--muted);line-height:1.4;display:block}
     .chat-teaser-close{flex:0 0 auto;border:0;background:transparent;color:var(--muted);font-size:18px;line-height:1;width:28px;height:28px;border-radius:50%}
     .chat-teaser-close:hover{background:var(--surface-2);color:var(--ink)}
-    .chat-panel{width:min(372px,calc(100vw - 32px));height:min(568px,calc(100dvh - 118px));background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;animation:chatIn .22s ease}
+    .chat-panel{width:min(340px,calc(100vw - 24px));height:min(600px,70dvh);background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;animation:chatIn .22s ease}
     .chat-panel[hidden]{display:none}
     @keyframes chatIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-    .chat-head{display:flex;align-items:center;gap:11px;padding:13px 14px;border-bottom:1px solid var(--line);flex:0 0 auto}
-    .chat-avatar{width:42px;height:42px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--line);flex:0 0 auto}
+    .chat-head{display:flex;align-items:center;gap:9px;padding:10px 12px;border-bottom:1px solid var(--line);flex:0 0 auto}
+    .chat-avatar{width:36px;height:36px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--line);flex:0 0 auto}
     .chat-head-text{flex:1;min-width:0}
-    .chat-head-text strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:17px;line-height:1.15}
+    .chat-head-text strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:15px;line-height:1.15}
     .chat-head-text span{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
     .chat-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;flex:0 0 auto}
     .chat-close{flex:0 0 auto;width:34px;height:34px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:50%;display:grid;place-items:center}
     .chat-close svg{width:15px;height:15px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round}
     .chat-close:hover{background:var(--surface-2)}
-    .chat-messages{flex:1;overflow-y:auto;padding:16px 14px 8px;display:flex;flex-direction:column;gap:9px;background:var(--bg)}
+    .chat-messages{flex:1;overflow-y:auto;padding:12px 10px 6px;display:flex;flex-direction:column;gap:7px;background:var(--bg)}
     .chat-row{display:flex;gap:8px;align-items:flex-end;max-width:100%}
     .chat-row.user{justify-content:flex-end}
-    .chat-row.calls{padding-left:34px}
-    .chat-mini{width:26px;height:26px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--line);flex:0 0 auto}
-    .chat-bubble{background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:16px 16px 16px 5px;padding:10px 13px;font-size:14px;line-height:1.45;max-width:82%;overflow-wrap:break-word}
+    .chat-row.calls{padding-left:30px}
+    .chat-mini{width:22px;height:22px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--line);flex:0 0 auto}
+    .chat-bubble{background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:16px 16px 16px 5px;padding:8px 11px;font-size:13.5px;line-height:1.45;max-width:86%;overflow-wrap:break-word}
     .chat-bubble.user{background:var(--brand);border-color:var(--brand);color:#fff;border-radius:16px 16px 5px 16px}
     .chat-typing{display:inline-flex;gap:4px;align-items:center;padding:14px 15px}
     .chat-typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:chatBlink 1s infinite}
     .chat-typing i:nth-child(2){animation-delay:.15s}
     .chat-typing i:nth-child(3){animation-delay:.3s}
     @keyframes chatBlink{0%,80%,100%{opacity:.25}40%{opacity:1}}
-    .chat-call-row{display:flex;flex-wrap:wrap;gap:8px}
-    .chat-call-row a{background:var(--brand);color:#fff;font-weight:700;font-size:13px;padding:9px 13px;border-radius:999px}
-    .chat-call-row a:hover{background:var(--brand-2)}
-    .chat-chips{display:flex;flex-wrap:wrap;gap:8px;padding:10px 14px 2px;flex:0 0 auto}
+    .chat-call-row{display:flex;flex-wrap:wrap;gap:6px}
+    .chat-call-row a{background:var(--link);color:#fff;font-weight:700;font-size:12px;padding:7px 10px;border-radius:999px}
+    .chat-call-row a:hover{background:var(--link-2)}
+    .chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px 2px;flex:0 0 auto}
     .chat-chips:empty{padding:0}
-    .chat-chip{border:1px solid var(--brand);color:var(--brand);background:transparent;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:700;font-family:inherit}
-    .chat-chip:hover{background:color-mix(in srgb,var(--brand) 10%,transparent)}
-    .chat-input-row{display:flex;gap:9px;padding:10px 14px 6px;flex:0 0 auto}
-    .chat-input-row input{flex:1;min-width:0;border:1px solid var(--line);border-radius:999px;padding:11px 16px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink);outline:none}
+    .chat-chip{border:1px solid var(--link);color:var(--link);background:transparent;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700;font-family:inherit}
+    .chat-chip:hover{background:color-mix(in srgb,var(--link) 10%,transparent)}
+    .chat-input-row{display:flex;gap:7px;padding:8px 10px 4px;flex:0 0 auto}
+    .chat-input-row input{flex:1;min-width:0;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink);outline:none}
     .chat-input-row input:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 20%,transparent)}
-    .chat-send{flex:0 0 auto;width:44px;height:44px;border:0;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center}
+    .chat-send{flex:0 0 auto;width:38px;height:38px;border:0;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center}
     .chat-send:hover{background:var(--brand-2)}
     .chat-send svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-    .chat-foot{margin:0;padding:4px 16px 12px;font-size:11.5px;color:var(--muted);text-align:center;flex:0 0 auto}
-    .chat-foot a{color:var(--brand);font-weight:700;white-space:nowrap}
-    @media(max-width:620px){.chat-widget{right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}.chat-panel{height:min(600px,calc(100dvh - 108px))}.back-to-top{bottom:calc(92px + env(safe-area-inset-bottom))}}
+    .chat-foot{margin:0;padding:3px 12px 10px;font-size:11px;color:var(--muted);text-align:center;flex:0 0 auto}
+    .chat-foot a{color:var(--link);font-weight:700;white-space:nowrap}
+    @media(max-width:620px){.chat-widget{right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}.chat-panel{height:min(70dvh,600px)}.back-to-top{bottom:calc(92px + env(safe-area-inset-bottom))}}
     @media(prefers-reduced-motion:reduce){.chat-panel,.chat-teaser{animation:none}.chat-typing i{animation:none}}
   </style>
 </head>
@@ -460,12 +447,12 @@
     <div class="wrap nav-inner">
       <a class="brand-logo" href="#/home" aria-label="Mr. Phone US home"><img src="assets/7ccd065d9d77d7fe.png" alt="Mr. Phone US Mobile Device Repair" /></a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#/repairs" data-nav="repairs">Repair prices</a><a href="#/repairs/services" data-nav="repairs">Services</a><a href="#/accessories" data-nav="accessories">Accessories</a><a href="#/videos" data-nav="videos">Videos</a><a href="#/visit/locations" data-nav="visit">Locations</a><a href="#/blog" data-nav="blog">Blog</a><a href="#/visit/faq" data-nav="visit">FAQs</a>
+        <a href="#/repairs" data-nav="repairs">Repair prices</a><a href="#/repairs/services" data-nav="repairs">Services</a><a href="#/accessories" data-nav="accessories">Accessories</a><a href="#/visit/locations" data-nav="visit">Locations</a><a href="#/blog" data-nav="blog">Blog</a><a href="#/visit/faq" data-nav="visit">FAQs</a>
       </nav>
       <a class="nav-call" href="#/book">Book a repair</a>
     </div>
     <nav class="mobile-pages wrap" aria-label="Pages">
-      <a href="#/home" data-nav="home">Home</a><a href="#/repairs" data-nav="repairs">Repair prices</a><a href="#/videos" data-nav="videos">Videos</a><a href="#/accessories" data-nav="accessories">Accessories</a><a href="#/blog" data-nav="blog">Blog</a><a href="#/visit" data-nav="visit">Locations &amp; reviews</a><a href="#/book" data-nav="book">Book a repair</a>
+      <a href="#/home" data-nav="home">Home</a><a href="#/repairs" data-nav="repairs">Repair prices</a><a href="#/accessories" data-nav="accessories">Accessories</a><a href="#/blog" data-nav="blog">Blog</a><a href="#/visit" data-nav="visit">Locations &amp; reviews</a><a href="#/book" data-nav="book">Book a repair</a>
     </nav>
   </header>
 
@@ -482,9 +469,33 @@
           </div>
         </div>
         <div class="hero-visual">
-          <div class="phone-frame"><span class="camera"></span><img src="assets/8cb034f8716c8215.jpg" alt="Wall of phone cases and accessories inside Mr. Phone US" /></div>
-          <div class="float-card one">From $39.99<small>iPhone screen repair</small></div>
-          <div class="float-card two">Free diagnosis<small>Pay when it’s fixed</small></div>
+          <div class="hero-carousel" id="heroCarousel">
+            <div class="hero-slides">
+              <article class="hero-slide hs-warranty active" aria-hidden="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+                <h3>90-Day Warranty</h3>
+                <p>Every repair covered. If the same issue comes back within 90 days, bring it in and we’ll take care of it.</p>
+              </article>
+              <article class="hero-slide hs-prices" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8l10 10-8 8L3 11V3Z"/><circle cx="8" cy="8" r="1.6"/></svg>
+                <h3>Lowest Prices</h3>
+                <p>iPhone screens from $39.99. Our prices are published, so you can check your number before you come in.</p>
+              </article>
+              <article class="hero-slide hs-quick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+                <h3>Quick Repair</h3>
+                <p>Most fixes done in 15–30 minutes. Walk in with a broken phone, walk out with it working.</p>
+              </article>
+              <article class="hero-slide hs-diagnosis" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h2l1-2 1.5 4 1-2H15"/></svg>
+                <h3>Free Diagnosis</h3>
+                <p>We find the problem for free, and you pay only when it’s fixed. No charge for looking.</p>
+              </article>
+            </div>
+            <button class="hero-arrow prev" id="heroPrev" type="button" aria-label="Previous offer">‹</button>
+            <button class="hero-arrow next" id="heroNext" type="button" aria-label="Next offer">›</button>
+          </div>
+          <div class="hero-dots" id="heroDots" aria-label="Choose an offer"></div>
         </div>
       </div>
     </section>
@@ -656,7 +667,7 @@
     </section>
 
     <div class="home-more" data-page="home">
-      <div class="wrap home-more-row"><span>More:</span><a href="#/repairs/services">All services →</a><a href="#/videos">Videos →</a><a href="#/accessories">Accessories →</a><a href="#/blog">Blog →</a><a href="#/visit">Reviews, story &amp; giveaway →</a><a href="#/visit/faq">FAQs →</a></div>
+      <div class="wrap home-more-row"><span>More:</span><a href="#/repairs/services">All services →</a><a href="#/accessories">Accessories →</a><a href="#/blog">Blog →</a><a href="#/visit">Reviews, story &amp; giveaway →</a><a href="#/visit/faq">FAQs →</a></div>
     </div>
 
     <section class="giveaway" data-page="visit" aria-labelledby="giveawayTitle">
@@ -728,7 +739,6 @@
               <a href="https://www.facebook.com/mrphoneus/" target="_blank" rel="noopener">Facebook</a>
             </div>
           </div>
-          <img class="store-photo" src="assets/8cb034f8716c8215.jpg" alt="Wall of phone cases and accessories inside the Mr. Phone US Tulsa store at 71st and Mingo" />
         </div>
         <div class="store-facts">
           <div class="store-fact">
@@ -800,7 +810,6 @@
               <a href="https://www.facebook.com/profile.php?id=61580863004548" target="_blank" rel="noopener">Facebook</a>
             </div>
           </div>
-          <img class="store-photo" src="assets/8cb034f8716c8215.jpg" alt="Interior of a Mr. Phone US store, with a wall of phone cases and accessories" />
         </div>
         <div class="store-facts">
           <div class="store-fact">
@@ -868,7 +877,6 @@
               <a href="https://www.facebook.com/p/Mr-Phone-US-Bixby-61579232687239/" target="_blank" rel="noopener">Facebook</a>
             </div>
           </div>
-          <img class="store-photo" src="assets/8cb034f8716c8215.jpg" alt="Interior of a Mr. Phone US store, with a wall of phone cases and accessories" />
         </div>
         <div class="store-facts">
           <div class="store-fact">
@@ -1662,18 +1670,6 @@
       </div>
     </section>
 
-    <section id="videos" class="reel-showcase" data-page="videos" aria-labelledby="reelTitle">
-      <div class="wrap">
-        <div class="section-head"><h2 id="reelTitle">Watch us in action.</h2><p>Short repair clips from our Tulsa, Broken Arrow and Bixby stores.</p></div>
-        <div class="reel-stage" id="reelStage">
-          <div class="reel-viewport" id="reelViewport" aria-live="polite"></div>
-          <button class="reel-arrow prev" id="reelPrev" type="button" aria-label="Previous video">‹</button>
-          <button class="reel-arrow next" id="reelNext" type="button" aria-label="Next video">›</button>
-          <div class="reel-controls"><div class="reel-dots" id="reelDots" aria-label="Choose a video"></div><span class="reel-count" id="reelCount"></span></div>
-          <p class="reel-help">Videos advance automatically. Swipe or use the arrows to explore; tap the sound button to unmute.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -1687,7 +1683,7 @@
         <div><h3>Broken Arrow · East Kenosha</h3><address>1025 E Kenosha St<br>Broken Arrow, OK 74012</address><div class="f-links"><a href="tel:+19188955543">Call (918) 895-5543</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=1025+E+Kenosha+St%2C+Broken+Arrow%2C+OK+74012" target="_blank" rel="noopener">Google Maps Directions</a><a href="https://maps.apple.com/?daddr=1025+E+Kenosha+St%2C+Broken+Arrow%2C+OK+74012" target="_blank" rel="noopener">Apple Maps Directions</a></div></div>
         <div><h3>Bixby · North Armstrong</h3><address>113 N Armstrong St<br>Bixby, OK 74008</address><div class="f-links"><a href="tel:+19188955558">Call (918) 895-5558</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=113+N+Armstrong+St%2C+Bixby%2C+OK+74008" target="_blank" rel="noopener">Google Maps Directions</a><a href="https://maps.apple.com/?daddr=113+N+Armstrong+St%2C+Bixby%2C+OK+74008" target="_blank" rel="noopener">Apple Maps Directions</a></div></div>
       </div>
-      <div class="footnote"><span>Repair prices and catalog details are a fixed snapshot researched October 13, 2026. Confirm price and stock before service.</span><span class="sources">Explore: <a href="#/repairs">repair prices</a> · <a href="#/videos">videos</a> · <a href="#/accessories">accessories</a> · <a href="#/blog">blog</a> · <a href="#/visit/faq">FAQs</a></span><span class="footer-games">Footer notes: just want to play? <a href="#/games">Play the 1-minute repair games →</a> &nbsp;·&nbsp; Just want to book? <a href="#/book">Book a repair →</a></span></div>
+      <div class="footnote"><span>Repair prices and catalog details are a fixed snapshot researched October 13, 2026. Confirm price and stock before service.</span><span class="sources">Explore: <a href="#/repairs">repair prices</a> · <a href="#/accessories">accessories</a> · <a href="#/blog">blog</a> · <a href="#/visit/faq">FAQs</a></span><span class="footer-games">Footer notes: just want to play? <a href="#/games">Play the 1-minute repair games →</a> &nbsp;·&nbsp; Just want to book? <a href="#/book">Book a repair →</a></span></div>
     </div>
   </footer>
 
@@ -1765,59 +1761,39 @@
       function updateBackToTop(){scrollFrame=null;var show=window.scrollY>Math.min(460,window.innerHeight*.55);backToTop.hidden=!show;backToTop.classList.toggle('visible',show)}
       window.addEventListener('scroll',function(){if(scrollFrame===null)scrollFrame=requestAnimationFrame(updateBackToTop)},{passive:true});
       window.addEventListener('resize',updateBackToTop,{passive:true});
-      if('IntersectionObserver' in window){new IntersectionObserver(function(entries){backToTop.classList.toggle('near-reel',entries[0].isIntersecting)},{threshold:.05}).observe(document.getElementById('videos'))}
       backToTop.addEventListener('click',function(){
         var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         window.scrollTo({top:0,left:0,behavior:reduced?'auto':'smooth'});
       });
       updateBackToTop();
 
-      // Replace only these local source paths when permanent launch files are ready.
-      var VIDEO_ADS=[
-        {title:'Tulsa Ad 1',store:'Tulsa · 71st & Mingo',src:'assets/d4b1acd31ccdc9c7.mp4'},
-        {title:'Tulsa Ad 2',store:'Tulsa · 71st & Mingo',src:'assets/01d4c666d654c529.mp4'},
-        {title:'Bixby Ad 1',store:'Bixby · North Armstrong',src:'assets/6e1c34f3b8f01107.mp4'},
-        {title:'Bixby Ad 2',store:'Bixby · North Armstrong',src:'assets/b775cd578ce94513.mp4'},
-        {title:'Broken Arrow Ad 1',store:'Broken Arrow · East Kenosha',src:'assets/3ae230843965e957.mp4'},
-        {title:'Broken Arrow Ad 2',store:'Broken Arrow · East Kenosha',src:'assets/d979e2b9d080324c.mp4'},
-        {title:'iPhone Screen Repair',store:'Mr. Phone US',src:'assets/2e4e30fc022ca067.mp4'}
-      ];
-      var reelViewport=document.getElementById('reelViewport'),reelDots=document.getElementById('reelDots'),reelCount=document.getElementById('reelCount'),reelStage=document.getElementById('reelStage');
-      var reelIndex=0,reelTimer=null,reelVisible=true,reelReduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches,reelTouchStart=0;
-      function makeReel(){
-        VIDEO_ADS.forEach(function(ad,i){
-          var slide=document.createElement('article');slide.className='reel-slide';slide.setAttribute('aria-hidden',i?'true':'false');
-          var video=document.createElement('video');video.src=ad.src;video.muted=true;video.defaultMuted=true;video.playsInline=true;video.preload=i===0?'auto':'metadata';video.setAttribute('aria-label',ad.title+' video');video.addEventListener('click',function(){toggleReelSound(video)});video.addEventListener('ended',function(){if(i===reelIndex)showReel(i+1,true)});
-          var sound=document.createElement('button');sound.type='button';sound.className='sound-toggle';sound.textContent='Tap for sound';sound.setAttribute('aria-label','Unmute '+ad.title);sound.addEventListener('click',function(){toggleReelSound(video)});
-          slide.appendChild(video);slide.appendChild(sound);reelViewport.appendChild(slide);
-          var dot=document.createElement('button');dot.type='button';dot.className='reel-dot';dot.setAttribute('aria-label','Show '+ad.title);dot.addEventListener('click',function(){showReel(i,true)});reelDots.appendChild(dot);
-        });
-        document.getElementById('reelPrev').addEventListener('click',function(){showReel(reelIndex-1,true)});
-        document.getElementById('reelNext').addEventListener('click',function(){showReel(reelIndex+1,true)});
-        reelViewport.addEventListener('touchstart',function(e){reelTouchStart=e.changedTouches[0].clientX},{passive:true});
-        reelViewport.addEventListener('touchend',function(e){var distance=e.changedTouches[0].clientX-reelTouchStart;if(Math.abs(distance)>45)showReel(reelIndex+(distance<0?1:-1),true)},{passive:true});
-        if('IntersectionObserver' in window){new IntersectionObserver(function(entries){reelVisible=entries[0].isIntersecting;if(reelVisible)playActiveReel();else pauseAllReels()},{threshold:.35}).observe(reelStage)}
-        document.addEventListener('visibilitychange',function(){if(document.hidden)pauseAllReels();else playActiveReel()});
-        showReel(0,false);
+
+
+      // Hero offer carousel: auto-flips about every 4 seconds, with dots, arrows and swipe.
+      var heroCarousel=document.getElementById('heroCarousel'),heroSlides=heroCarousel?Array.prototype.slice.call(heroCarousel.querySelectorAll('.hero-slide')):[],heroDotsEl=document.getElementById('heroDots');
+      var heroIndex=0,heroTimer=null,heroReduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches,heroTouchX=0;
+      heroSlides.forEach(function(slide,i){
+        var dot=document.createElement('button');dot.type='button';dot.className='hero-dot';dot.setAttribute('aria-label','Show offer '+(i+1)+' of '+heroSlides.length);dot.addEventListener('click',function(){showHeroSlide(i,true)});heroDotsEl.appendChild(dot);
+      });
+      function showHeroSlide(next,userMoved){
+        if(!heroSlides.length)return;
+        heroIndex=(next+heroSlides.length)%heroSlides.length;
+        heroSlides.forEach(function(slide,i){slide.classList.toggle('active',i===heroIndex);slide.setAttribute('aria-hidden',i===heroIndex?'false':'true')});
+        if(heroDotsEl)Array.prototype.forEach.call(heroDotsEl.querySelectorAll('.hero-dot'),function(dot,i){dot.classList.toggle('active',i===heroIndex);dot.setAttribute('aria-current',i===heroIndex?'true':'false')});
+        if(userMoved)startHeroTimer();
       }
-      function activeReelVideo(){return reelViewport.querySelectorAll('video')[reelIndex]}
-      function pauseAllReels(){reelViewport.querySelectorAll('video').forEach(function(video){video.pause()});clearTimeout(reelTimer);reelTimer=null}
-      function playActiveReel(){if(!reelVisible||document.hidden)return;var video=activeReelVideo();if(video){video.play().catch(function(){});scheduleReel()}}
-      function scheduleReel(){clearTimeout(reelTimer);if(reelReduced)return;reelTimer=setTimeout(function(){showReel(reelIndex+1,false)},9000)}
-      function showReel(next,userMoved){
-        var slides=reelViewport.querySelectorAll('.reel-slide'),dots=reelDots.querySelectorAll('.reel-dot');if(!slides.length)return;
-        var previous=reelIndex;reelIndex=(next+slides.length)%slides.length;pauseAllReels();
-        slides.forEach(function(slide,i){slide.classList.remove('active','was-active');if(i===previous&&i!==reelIndex)slide.classList.add('was-active');slide.setAttribute('aria-hidden',i===reelIndex?'false':'true')});
-        dots.forEach(function(dot,i){dot.classList.toggle('active',i===reelIndex);dot.setAttribute('aria-current',i===reelIndex?'true':'false')});
-        slides[reelIndex].classList.add('active');reelCount.textContent=(reelIndex+1)+' / '+slides.length;
-        if(userMoved){slides[reelIndex].querySelector('video').currentTime=0}playActiveReel();
+      function startHeroTimer(){clearInterval(heroTimer);heroTimer=null;if(heroReduced||heroSlides.length<2)return;heroTimer=setInterval(function(){if(!document.hidden)showHeroSlide(heroIndex+1,false)},4000)}
+      if(heroCarousel){
+        document.getElementById('heroPrev').addEventListener('click',function(){showHeroSlide(heroIndex-1,true)});
+        document.getElementById('heroNext').addEventListener('click',function(){showHeroSlide(heroIndex+1,true)});
+        heroCarousel.addEventListener('mouseenter',function(){clearInterval(heroTimer);heroTimer=null});
+        heroCarousel.addEventListener('mouseleave',startHeroTimer);
+        heroCarousel.addEventListener('focusin',function(){clearInterval(heroTimer);heroTimer=null});
+        heroCarousel.addEventListener('focusout',startHeroTimer);
+        heroCarousel.addEventListener('touchstart',function(e){heroTouchX=e.changedTouches[0].clientX},{passive:true});
+        heroCarousel.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-heroTouchX;if(Math.abs(d)>45)showHeroSlide(heroIndex+(d<0?1:-1),true)},{passive:true});
+        showHeroSlide(0,false);startHeroTimer();
       }
-      function toggleReelSound(video){
-        var muted=!video.muted;reelViewport.querySelectorAll('video').forEach(function(item){item.muted=true});video.muted=muted;
-        reelViewport.querySelectorAll('.sound-toggle').forEach(function(button){button.textContent='Tap for sound'});
-        var button=video.parentNode.querySelector('.sound-toggle');button.textContent=video.muted?'Tap for sound':'Sound on · tap to mute';button.setAttribute('aria-label',video.muted?'Unmute video':'Mute video');video.play().catch(function(){});
-      }
-      makeReel();
 
       var iphone=[
         {m:'iPhone 17 Pro Max',lcd:'$159.99',oled:'$249.99'},{m:'iPhone 17 Pro',lcd:'$159.99',oled:'$249.99'},{m:'iPhone 17 Air',oled:'$299.99'},{m:'iPhone 17',lcd:'$139.99',oled:'$199.99'},{m:'iPhone 17 E',lcd:'$99.99',oled:'$139.99'},
@@ -1895,8 +1871,8 @@
       start.addEventListener('click',launch);switchGame('crack');
 
       // Multi-page router: each [data-page] group is one page; hash routes like #/repairs show one page at a time.
-      var PAGES={home:1,repairs:1,games:1,accessories:1,blog:1,post:1,visit:1,book:1,videos:1,storeTulsa:1,storeBrokenArrow:1,storeBixby:1};
-      var PAGE_TITLES={home:'Phone Repair Tulsa, Broken Arrow & Bixby | Mr. Phone US',repairs:'Repair Prices & Services | Mr. Phone US',games:'Repair Games Arcade | Mr. Phone US',accessories:'Accessories & Refurbished Phones | Mr. Phone US',blog:'Blog | Mr. Phone US',post:'Blog | Mr. Phone US',visit:'Locations, Reviews & FAQs | Mr. Phone US',book:'Book a Repair | Mr. Phone US',videos:'Videos | Mr. Phone US',storeTulsa:'Tulsa · 71st & Mingo | Mr. Phone US',storeBrokenArrow:'Broken Arrow · East Kenosha | Mr. Phone US',storeBixby:'Bixby · North Armstrong | Mr. Phone US'};
+      var PAGES={home:1,repairs:1,games:1,accessories:1,blog:1,post:1,visit:1,book:1,storeTulsa:1,storeBrokenArrow:1,storeBixby:1};
+      var PAGE_TITLES={home:'Phone Repair Tulsa, Broken Arrow & Bixby | Mr. Phone US',repairs:'Repair Prices & Services | Mr. Phone US',games:'Repair Games Arcade | Mr. Phone US',accessories:'Accessories & Refurbished Phones | Mr. Phone US',blog:'Blog | Mr. Phone US',post:'Blog | Mr. Phone US',visit:'Locations, Reviews & FAQs | Mr. Phone US',book:'Book a Repair | Mr. Phone US',storeTulsa:'Tulsa · 71st & Mingo | Mr. Phone US',storeBrokenArrow:'Broken Arrow · East Kenosha | Mr. Phone US',storeBixby:'Bixby · North Armstrong | Mr. Phone US'};
       var STORE_ROUTES={tulsa:'storeTulsa','broken-arrow':'storeBrokenArrow',bixby:'storeBixby'};
       var NAV_HIGHLIGHT_MAP={storeTulsa:'visit',storeBrokenArrow:'visit',storeBixby:'visit',post:'blog'};
       var pageEls=document.querySelectorAll('[data-page]'),idPage={};
@@ -1905,7 +1881,6 @@
         var raw=location.hash.replace(/^#/,'');
         if(raw.charAt(0)==='/'){
           var parts=raw.slice(1).split('/');
-          if(parts[0]==='home'&&parts[1]==='videos')return {page:'videos',anchor:null};
           if(parts[0]==='store'){
             if(parts[1]&&STORE_ROUTES[parts[1]])return {page:STORE_ROUTES[parts[1]],anchor:parts[2]||null};
             return {page:'home',anchor:null};
@@ -1957,7 +1932,7 @@
         {key:'brokenarrow',name:'Broken Arrow',area:'East Kenosha',addr:'1025 E Kenosha St, Broken Arrow, OK 74012',phone:'(918) 895-5543',tel:'+19188955543',email:'mrphoneusb.k@gmail.com',hours:'Mon–Sat · 9 AM–8 PM<br />Sun · 9 AM–3 PM',sched:[[540,900],[540,1200],[540,1200],[540,1200],[540,1200],[540,1200],[540,1200]]},
         {key:'bixby',name:'Bixby',area:'North Armstrong',addr:'113 N Armstrong St, Bixby, OK 74008',phone:'(918) 895-5558',tel:'+19188955558',email:'mrphoneusbixby@gmail.com',hours:'Mon–Sat · 9:30 AM–8 PM<br />Sun · 9:30 AM–3 PM',sched:[[570,900],[570,1200],[570,1200],[570,1200],[570,1200],[570,1200],[570,1200]]}
       ];
-      var CHIPS_START=[{label:'Cracked screen',msg:'My screen is cracked'},{label:'Battery problem',msg:'My battery drains too fast'},{label:'Check a price',msg:'How much is a screen replacement?'},{label:'Store hours',msg:'What are your hours?'}];
+      var CHIPS_START=[{label:'Book a repair',msg:'I want to book a repair'},{label:'Check a price',msg:'How much is a screen replacement?'}];
       var CHIPS_CALLS=[{label:'Book a repair',msg:'I want to book a repair'},{label:'Leave my number',action:'number'},{label:'Check another price',msg:'Check another price'},{label:'Store hours',msg:'What are your hours?'}];
       function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight}
       function chatRow(html,cls){var row=document.createElement('div');row.className='chat-row '+cls;row.innerHTML=html;chatMsgs.appendChild(row);chatScroll();return row}
